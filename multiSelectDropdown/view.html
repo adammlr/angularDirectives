@@ -1,0 +1,10 @@
+<div class="btn-group" data-ng-class="{open: open}">
+    <button type="button" class="btn btn-default dropdown-toggle" data-ng-click="open=!open;">{{name}} <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li><a data-ng-click="selectAll()"><span class="glyphicon glyphicon-ok"></span>&nbsp;Check All</a></li>
+        <li><a data-ng-click="deselectAll()"><span class="glyphicon glyphicon-remove"></span>&nbsp;Uncheck All</a></li>
+        <li class="divider"></li>
+        <li data-ng-repeat="option in options"> <a data-ng-click="setSelectedItem()"><span data-ng-class="(option.isSelected) ? 'glyphicon glyphicon-ok' : ''"></span>&nbsp;{{option.name}}</a></li>
+    </ul>
+</div>

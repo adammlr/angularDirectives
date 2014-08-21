@@ -1,11 +1,46 @@
-<!DOCTYPE html>
 
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp" class="no-js">
     <head>
-        <meta charset="utf-8" />
-        <title></title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Angular Directives</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <style>
+            body { padding-top: 80px;}
+            a {cursor: pointer;}
+        </style>
     </head>
     <body>
-        Hello World
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#/">Angular Directives</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#/multiSelectDropdown">Multi Select Dropdown</a></li>
+                        <li><a href="#/view2">view2</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div data-ng-view></div>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>        
+        <script src="app.js"></script>
+        <script src="multiSelectDropdown/directive.js"></script>
     </body>
 </html>
