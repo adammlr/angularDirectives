@@ -1,7 +1,7 @@
 'use strict';
 
 (function(angular) {
-    angular.module('myApp.directives', []).directive('multiSelectDropdown', [
+    angular.module('myApp.directives.dropdown', []).directive('multiSelectDropdown', [
 
         function() {
             return {

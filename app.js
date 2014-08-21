@@ -2,7 +2,8 @@
 
 angular.module('myApp', [
   'ngRoute',
-  'myApp.directives'
+  'myApp.directives.dropdown',
+  'myApp.directives.sortable'
 ])
 .config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/multiSelectDropdown', { templateUrl: 'multiSelectDemo.html', controller: 'multiSelectDropdownDemoController' });

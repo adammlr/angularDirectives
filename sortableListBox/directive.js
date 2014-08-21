@@ -1,7 +1,7 @@
 'use strict';
 
 (function(angular) {
-    angular.module('myApp.directives', []).directive('sortableListBox', [
+    angular.module('myApp.directives.sortable', []).directive('sortableListBox', [
 
         function() {
             return {
