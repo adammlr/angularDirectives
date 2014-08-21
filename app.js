@@ -7,7 +7,7 @@ angular.module('myApp', [
 .config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/multiSelectDropdown', { templateUrl: 'multiSelectDemo.html', controller: 'multiSelectDropdownDemoController' });
     $routeProvider.when('/view2', { templateUrl: 'partials/partial2.html', controller: 'MyCtrl2' });
-    $routeProvider.otherwise({ redirectTo: '/view1' });
+    $routeProvider.otherwise({ redirectTo: '/multiSelectDropdown' });
 } ])
 .controller('multiSelectDropdownDemoController', ['$scope', function ($scope) {
     $scope.options = [
