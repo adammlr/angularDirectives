@@ -1,0 +1,17 @@
+<div class="list-group">
+    <a data-ng-repeat="item in items track by item.id"
+       data-ng-class="activeItemStyle ? 'list-group-item active' : 'list-group-item'"
+       data-ng-click="clicked(item)" data-id="{{item.id}}">
+        <h4 class="list-group-item-heading">{{item.name}}
+            <span class="pull-right" data-ng-if="sortableList" style="display: inline-block;">
+                <button type="button" data-ng-click="moveUp($event, $index)" class="btn btn-xs btn-default"
+                        data-ng-disabled="$index === 0"><span class="glyphicon glyphicon-circle-arrow-up"></span></button>
+                <button type="button" data-ng-click="moveDown($event, $index)" class="btn btn-xs btn-default"
+                        data-ng-disabled="$index === items.length - 1"><span
+                        class="glyphicon glyphicon-circle-arrow-down"></span></button>
+            </span>
+        </h4>
+
+        <p class="list-group-item-text">{{item.description}}</p>
+    </a>
+</div>

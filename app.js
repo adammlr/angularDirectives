@@ -6,7 +6,7 @@ angular.module('myApp', [
 ])
 .config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/multiSelectDropdown', { templateUrl: 'multiSelectDemo.html', controller: 'multiSelectDropdownDemoController' });
-    $routeProvider.when('/view2', { templateUrl: 'partials/partial2.html', controller: 'MyCtrl2' });
+    $routeProvider.when('/sortableListBox', { templateUrl: 'sortableListBoxDemo.html', controller: 'sortableListBoxDemoController' });
     $routeProvider.otherwise({ redirectTo: '/multiSelectDropdown' });
 } ])
 .controller('multiSelectDropdownDemoController', ['$scope', function ($scope) {
@@ -30,4 +30,23 @@ angular.module('myApp', [
                 }
             ];
     $scope.name = 'Multi Select Drop Down';
+} ])
+.controller('sortableListBoxDemoController', ['$scope', function ($scope) {
+    $scope.items = [
+                {
+                    id: 1,
+                    name: 'one'
+                },
+
+                {
+                    id: 2,
+                    name: 'two'
+                },
+
+                {
+                    id: 3,
+                    name: 'three'
+                }
+            ];
+    
 } ]);
