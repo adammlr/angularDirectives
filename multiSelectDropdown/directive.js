@@ -5,7 +5,7 @@
         function() {
             return {
                 restrict: 'E',
-                templateUrl: '/multiSelectDropdown/view.html',
+                templateUrl: 'multiSelectDropdown/view.html',
                 scope: {
                     name: '=',
                     options: '='
