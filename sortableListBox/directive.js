@@ -42,6 +42,7 @@
                             });
 
                             scope.items = newItemsArray;
+                            scope.$apply();
                         });
                     }
 
