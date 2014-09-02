@@ -1,0 +1,8 @@
+<form name="myForm">
+    <input type="text" numeric-input min-value="10" max-value="20" ng-model="myValue" name="myInput" />
+    <span>Value: {{myValue}}</span>
+    <div ng-show="myForm.myInput.$error.min">Min value is 10</div>
+    <div ng-show="myForm.myInput.$error.max">Max value is 20</div>
+    <br/>
+    <button type="submit">Submit</button>
+</form>

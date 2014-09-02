@@ -3,11 +3,13 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.directives.dropdown',
-  'myApp.directives.sortable'
+  'myApp.directives.sortable',
+  'myApp.directives.numericInput'
 ])
 .config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/multiSelectDropdown', { templateUrl: 'multiSelectDemo.html', controller: 'multiSelectDropdownDemoController' });
     $routeProvider.when('/sortableListBox', { templateUrl: 'sortableListBoxDemo.html', controller: 'sortableListBoxDemoController' });
+    $routeProvider.when('/numericInput', { templateUrl: 'numericInput.html', controller: 'numericInputController' });
     $routeProvider.otherwise({ redirectTo: '/multiSelectDropdown' });
 } ])
 .controller('multiSelectDropdownDemoController', ['$scope', function ($scope) {
@@ -49,5 +51,8 @@ angular.module('myApp', [
                     name: 'three'
                 }
             ];
-    
+
+} ])
+.controller('numericInputController', ['$scope', function ($scope) {
+    $scope.myValue = null;
 } ]);
